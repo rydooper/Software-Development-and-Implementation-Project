@@ -19,10 +19,10 @@
   <widget class="QStackedWidget" name="stackedWidget">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>20</y>
-     <width>460</width>
-     <height>341</height>
+     <x>0</x>
+     <y>0</y>
+     <width>500</width>
+     <height>400</height>
     </rect>
    </property>
    <property name="currentIndex">
@@ -32,8 +32,8 @@
     <widget class="QPushButton" name="NewMessageButton">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>70</y>
+       <x>110</x>
+       <y>90</y>
        <width>120</width>
        <height>30</height>
       </rect>
@@ -45,8 +45,8 @@
     <widget class="QPushButton" name="GroupChatButton">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>70</y>
+       <x>270</x>
+       <y>90</y>
        <width>120</width>
        <height>30</height>
       </rect>
@@ -58,8 +58,8 @@
     <widget class="QPushButton" name="ViewProfileButton">
      <property name="geometry">
       <rect>
-       <x>80</x>
-       <y>120</y>
+       <x>110</x>
+       <y>140</y>
        <width>120</width>
        <height>30</height>
       </rect>
@@ -71,8 +71,8 @@
     <widget class="QPushButton" name="ContactsButton">
      <property name="geometry">
       <rect>
-       <x>240</x>
-       <y>120</y>
+       <x>270</x>
+       <y>140</y>
        <width>120</width>
        <height>30</height>
       </rect>
@@ -84,8 +84,8 @@
     <widget class="QPushButton" name="LogoutButton">
      <property name="geometry">
       <rect>
-       <x>30</x>
-       <y>250</y>
+       <x>60</x>
+       <y>270</y>
        <width>120</width>
        <height>30</height>
       </rect>
@@ -97,8 +97,8 @@
     <widget class="QLabel" name="MenuTitle">
      <property name="geometry">
       <rect>
-       <x>156</x>
-       <y>30</y>
+       <x>186</x>
+       <y>50</y>
        <width>121</width>
        <height>20</height>
       </rect>

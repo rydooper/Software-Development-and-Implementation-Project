@@ -9,6 +9,7 @@ LoginWindow::LoginWindow(QWidget *parent)
     ui->stackedWidget->insertWidget(1,&_RegForm);
     ui->stackedWidget->insertWidget(2,&_MenuForm);
 
+
     connect(&_MenuForm, SIGNAL(LogoutClicked()),this, SLOT(moveBackLogin()));
     connect(&_RegForm, SIGNAL(BackClicked()),this, SLOT(moveBackLogin()));
 
@@ -34,6 +35,8 @@ void LoginWindow::moveBackLogin()
 {
     ui->stackedWidget->setCurrentIndex(0);
 }
+
+
 
 
 

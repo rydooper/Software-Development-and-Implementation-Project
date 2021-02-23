@@ -32,5 +32,6 @@ private:
     Ui::LoginWindow *ui;
     RegisterWindow _RegForm;
     MenuWindow _MenuForm;
+
 };
 #endif // LOGINWINDOW_H

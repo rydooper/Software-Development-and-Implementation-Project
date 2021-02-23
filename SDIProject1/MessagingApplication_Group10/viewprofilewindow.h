@@ -15,8 +15,10 @@ public:
     explicit ViewProfileWindow(QWidget *parent = nullptr);
     ~ViewProfileWindow();
 
+
 private:
     Ui::ViewProfileWindow *ui;
+
 };
 
 #endif // VIEWPROFILEWINDOW_H

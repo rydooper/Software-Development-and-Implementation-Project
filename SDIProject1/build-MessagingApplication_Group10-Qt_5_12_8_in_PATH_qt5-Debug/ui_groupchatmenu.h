@@ -25,7 +25,7 @@ public:
     QStackedWidget *stackedWidget;
     QWidget *page;
     QLabel *GCMenuTitle;
-    QTextBrowser *textBrowser;
+    QTextBrowser *GCMenuDisplay;
     QPushButton *GCMenuBackButton;
 
     void setupUi(QWidget *GroupChatMenu)
@@ -42,9 +42,9 @@ public:
         GCMenuTitle->setObjectName(QString::fromUtf8("GCMenuTitle"));
         GCMenuTitle->setGeometry(QRect(170, 30, 141, 20));
         GCMenuTitle->setAlignment(Qt::AlignCenter);
-        textBrowser = new QTextBrowser(page);
-        textBrowser->setObjectName(QString::fromUtf8("textBrowser"));
-        textBrowser->setGeometry(QRect(30, 60, 441, 251));
+        GCMenuDisplay = new QTextBrowser(page);
+        GCMenuDisplay->setObjectName(QString::fromUtf8("GCMenuDisplay"));
+        GCMenuDisplay->setGeometry(QRect(30, 60, 441, 251));
         GCMenuBackButton = new QPushButton(page);
         GCMenuBackButton->setObjectName(QString::fromUtf8("GCMenuBackButton"));
         GCMenuBackButton->setGeometry(QRect(30, 330, 89, 25));

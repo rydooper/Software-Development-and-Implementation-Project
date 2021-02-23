@@ -52,25 +52,37 @@ OBJECTS_DIR   = ./
 
 ####### Files
 
-SOURCES       = ../MessagingApplication_Group10/groupchatmenu.cpp \
+SOURCES       = ../MessagingApplication_Group10/contactswindow.cpp \
+		../MessagingApplication_Group10/groupchatmenu.cpp \
+		../MessagingApplication_Group10/groupchatwindow.cpp \
 		../MessagingApplication_Group10/main.cpp \
 		../MessagingApplication_Group10/loginwindow.cpp \
 		../MessagingApplication_Group10/menuwindow.cpp \
+		../MessagingApplication_Group10/newmessagewindow.cpp \
 		../MessagingApplication_Group10/registerwindow.cpp \
-		../MessagingApplication_Group10/viewprofilewindow.cpp moc_groupchatmenu.cpp \
+		../MessagingApplication_Group10/viewprofilewindow.cpp moc_contactswindow.cpp \
+		moc_groupchatmenu.cpp \
+		moc_groupchatwindow.cpp \
 		moc_loginwindow.cpp \
 		moc_menuwindow.cpp \
+		moc_newmessagewindow.cpp \
 		moc_registerwindow.cpp \
 		moc_viewprofilewindow.cpp
-OBJECTS       = groupchatmenu.o \
+OBJECTS       = contactswindow.o \
+		groupchatmenu.o \
+		groupchatwindow.o \
 		main.o \
 		loginwindow.o \
 		menuwindow.o \
+		newmessagewindow.o \
 		registerwindow.o \
 		viewprofilewindow.o \
+		moc_contactswindow.o \
 		moc_groupchatmenu.o \
+		moc_groupchatwindow.o \
 		moc_loginwindow.o \
 		moc_menuwindow.o \
+		moc_newmessagewindow.o \
 		moc_registerwindow.o \
 		moc_viewprofilewindow.o
 DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -167,14 +179,20 @@ DIST          = /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/exceptions.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/yacc.prf \
 		/usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/lex.prf \
-		../MessagingApplication_Group10/MessagingApplication_Group10.pro ../MessagingApplication_Group10/groupchatmenu.h \
+		../MessagingApplication_Group10/MessagingApplication_Group10.pro ../MessagingApplication_Group10/contactswindow.h \
+		../MessagingApplication_Group10/groupchatmenu.h \
+		../MessagingApplication_Group10/groupchatwindow.h \
 		../MessagingApplication_Group10/loginwindow.h \
 		../MessagingApplication_Group10/menuwindow.h \
+		../MessagingApplication_Group10/newmessagewindow.h \
 		../MessagingApplication_Group10/registerwindow.h \
-		../MessagingApplication_Group10/viewprofilewindow.h ../MessagingApplication_Group10/groupchatmenu.cpp \
+		../MessagingApplication_Group10/viewprofilewindow.h ../MessagingApplication_Group10/contactswindow.cpp \
+		../MessagingApplication_Group10/groupchatmenu.cpp \
+		../MessagingApplication_Group10/groupchatwindow.cpp \
 		../MessagingApplication_Group10/main.cpp \
 		../MessagingApplication_Group10/loginwindow.cpp \
 		../MessagingApplication_Group10/menuwindow.cpp \
+		../MessagingApplication_Group10/newmessagewindow.cpp \
 		../MessagingApplication_Group10/registerwindow.cpp \
 		../MessagingApplication_Group10/viewprofilewindow.cpp
 QMAKE_TARGET  = MessagingApplication_Group10
@@ -185,7 +203,7 @@ TARGET        = MessagingApplication_Group10
 first: all
 ####### Build rules
 
-MessagingApplication_Group10: ui_groupchatmenu.h ui_loginwindow.h ui_menuwindow.h ui_registerwindow.h ui_viewprofilewindow.h $(OBJECTS)  
+MessagingApplication_Group10: ui_contactswindow.h ui_groupchatmenu.h ui_groupchatwindow.h ui_loginwindow.h ui_menuwindow.h ui_newmessagewindow.h ui_registerwindow.h ui_viewprofilewindow.h $(OBJECTS)  
 	$(LINK) $(LFLAGS) -o $(TARGET) $(OBJECTS) $(OBJCOMP) $(LIBS)
 
 Makefile: ../MessagingApplication_Group10/MessagingApplication_Group10.pro /usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++/qmake.conf /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/spec_pre.prf \
@@ -394,9 +412,9 @@ distdir: FORCE
 	@test -d $(DISTDIR) || mkdir -p $(DISTDIR)
 	$(COPY_FILE) --parents $(DIST) $(DISTDIR)/
 	$(COPY_FILE) --parents /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../MessagingApplication_Group10/groupchatmenu.h ../MessagingApplication_Group10/loginwindow.h ../MessagingApplication_Group10/menuwindow.h ../MessagingApplication_Group10/registerwindow.h ../MessagingApplication_Group10/viewprofilewindow.h $(DISTDIR)/
-	$(COPY_FILE) --parents ../MessagingApplication_Group10/groupchatmenu.cpp ../MessagingApplication_Group10/main.cpp ../MessagingApplication_Group10/loginwindow.cpp ../MessagingApplication_Group10/menuwindow.cpp ../MessagingApplication_Group10/registerwindow.cpp ../MessagingApplication_Group10/viewprofilewindow.cpp $(DISTDIR)/
-	$(COPY_FILE) --parents ../MessagingApplication_Group10/groupchatmenu.ui ../MessagingApplication_Group10/loginwindow.ui ../MessagingApplication_Group10/menuwindow.ui ../MessagingApplication_Group10/registerwindow.ui ../MessagingApplication_Group10/viewprofilewindow.ui $(DISTDIR)/
+	$(COPY_FILE) --parents ../MessagingApplication_Group10/contactswindow.h ../MessagingApplication_Group10/groupchatmenu.h ../MessagingApplication_Group10/groupchatwindow.h ../MessagingApplication_Group10/loginwindow.h ../MessagingApplication_Group10/menuwindow.h ../MessagingApplication_Group10/newmessagewindow.h ../MessagingApplication_Group10/registerwindow.h ../MessagingApplication_Group10/viewprofilewindow.h $(DISTDIR)/
+	$(COPY_FILE) --parents ../MessagingApplication_Group10/contactswindow.cpp ../MessagingApplication_Group10/groupchatmenu.cpp ../MessagingApplication_Group10/groupchatwindow.cpp ../MessagingApplication_Group10/main.cpp ../MessagingApplication_Group10/loginwindow.cpp ../MessagingApplication_Group10/menuwindow.cpp ../MessagingApplication_Group10/newmessagewindow.cpp ../MessagingApplication_Group10/registerwindow.cpp ../MessagingApplication_Group10/viewprofilewindow.cpp $(DISTDIR)/
+	$(COPY_FILE) --parents ../MessagingApplication_Group10/contactswindow.ui ../MessagingApplication_Group10/groupchatmenu.ui ../MessagingApplication_Group10/groupchatwindow.ui ../MessagingApplication_Group10/loginwindow.ui ../MessagingApplication_Group10/menuwindow.ui ../MessagingApplication_Group10/newmessagewindow.ui ../MessagingApplication_Group10/registerwindow.ui ../MessagingApplication_Group10/viewprofilewindow.ui $(DISTDIR)/
 	$(COPY_FILE) --parents MessagingApplication_Group10_es_ES.ts $(DISTDIR)/
 
 
@@ -429,13 +447,23 @@ compiler_moc_predefs_clean:
 moc_predefs.h: /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 	g++ -pipe -g -std=gnu++11 -Wall -W -dM -E -o moc_predefs.h /usr/lib/x86_64-linux-gnu/qt5/mkspecs/features/data/dummy.cpp
 
-compiler_moc_header_make_all: moc_groupchatmenu.cpp moc_loginwindow.cpp moc_menuwindow.cpp moc_registerwindow.cpp moc_viewprofilewindow.cpp
+compiler_moc_header_make_all: moc_contactswindow.cpp moc_groupchatmenu.cpp moc_groupchatwindow.cpp moc_loginwindow.cpp moc_menuwindow.cpp moc_newmessagewindow.cpp moc_registerwindow.cpp moc_viewprofilewindow.cpp
 compiler_moc_header_clean:
-	-$(DEL_FILE) moc_groupchatmenu.cpp moc_loginwindow.cpp moc_menuwindow.cpp moc_registerwindow.cpp moc_viewprofilewindow.cpp
+	-$(DEL_FILE) moc_contactswindow.cpp moc_groupchatmenu.cpp moc_groupchatwindow.cpp moc_loginwindow.cpp moc_menuwindow.cpp moc_newmessagewindow.cpp moc_registerwindow.cpp moc_viewprofilewindow.cpp
+moc_contactswindow.cpp: ../MessagingApplication_Group10/contactswindow.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/ntu-user/SDIProject1/build-MessagingApplication_Group10-Qt_5_12_8_in_PATH_qt5-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/ntu-user/SDIProject1/MessagingApplication_Group10 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../MessagingApplication_Group10/contactswindow.h -o moc_contactswindow.cpp
+
 moc_groupchatmenu.cpp: ../MessagingApplication_Group10/groupchatmenu.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/ntu-user/SDIProject1/build-MessagingApplication_Group10-Qt_5_12_8_in_PATH_qt5-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/ntu-user/SDIProject1/MessagingApplication_Group10 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../MessagingApplication_Group10/groupchatmenu.h -o moc_groupchatmenu.cpp
+
+moc_groupchatwindow.cpp: ../MessagingApplication_Group10/groupchatwindow.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/ntu-user/SDIProject1/build-MessagingApplication_Group10-Qt_5_12_8_in_PATH_qt5-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/ntu-user/SDIProject1/MessagingApplication_Group10 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../MessagingApplication_Group10/groupchatwindow.h -o moc_groupchatwindow.cpp
 
 moc_loginwindow.cpp: ../MessagingApplication_Group10/loginwindow.h \
 		../MessagingApplication_Group10/menuwindow.h \
@@ -448,6 +476,11 @@ moc_menuwindow.cpp: ../MessagingApplication_Group10/menuwindow.h \
 		moc_predefs.h \
 		/usr/lib/qt5/bin/moc
 	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/ntu-user/SDIProject1/build-MessagingApplication_Group10-Qt_5_12_8_in_PATH_qt5-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/ntu-user/SDIProject1/MessagingApplication_Group10 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../MessagingApplication_Group10/menuwindow.h -o moc_menuwindow.cpp
+
+moc_newmessagewindow.cpp: ../MessagingApplication_Group10/newmessagewindow.h \
+		moc_predefs.h \
+		/usr/lib/qt5/bin/moc
+	/usr/lib/qt5/bin/moc $(DEFINES) --include /home/ntu-user/SDIProject1/build-MessagingApplication_Group10-Qt_5_12_8_in_PATH_qt5-Debug/moc_predefs.h -I/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++ -I/home/ntu-user/SDIProject1/MessagingApplication_Group10 -I/usr/include/x86_64-linux-gnu/qt5 -I/usr/include/x86_64-linux-gnu/qt5/QtWidgets -I/usr/include/x86_64-linux-gnu/qt5/QtGui -I/usr/include/x86_64-linux-gnu/qt5/QtCore -I. -I/usr/include/c++/9 -I/usr/include/x86_64-linux-gnu/c++/9 -I/usr/include/c++/9/backward -I/usr/lib/gcc/x86_64-linux-gnu/9/include -I/usr/local/include -I/usr/include/x86_64-linux-gnu -I/usr/include ../MessagingApplication_Group10/newmessagewindow.h -o moc_newmessagewindow.cpp
 
 moc_registerwindow.cpp: ../MessagingApplication_Group10/registerwindow.h \
 		moc_predefs.h \
@@ -463,12 +496,20 @@ compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
 compiler_moc_source_make_all:
 compiler_moc_source_clean:
-compiler_uic_make_all: ui_groupchatmenu.h ui_loginwindow.h ui_menuwindow.h ui_registerwindow.h ui_viewprofilewindow.h
+compiler_uic_make_all: ui_contactswindow.h ui_groupchatmenu.h ui_groupchatwindow.h ui_loginwindow.h ui_menuwindow.h ui_newmessagewindow.h ui_registerwindow.h ui_viewprofilewindow.h
 compiler_uic_clean:
-	-$(DEL_FILE) ui_groupchatmenu.h ui_loginwindow.h ui_menuwindow.h ui_registerwindow.h ui_viewprofilewindow.h
+	-$(DEL_FILE) ui_contactswindow.h ui_groupchatmenu.h ui_groupchatwindow.h ui_loginwindow.h ui_menuwindow.h ui_newmessagewindow.h ui_registerwindow.h ui_viewprofilewindow.h
+ui_contactswindow.h: ../MessagingApplication_Group10/contactswindow.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic ../MessagingApplication_Group10/contactswindow.ui -o ui_contactswindow.h
+
 ui_groupchatmenu.h: ../MessagingApplication_Group10/groupchatmenu.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic ../MessagingApplication_Group10/groupchatmenu.ui -o ui_groupchatmenu.h
+
+ui_groupchatwindow.h: ../MessagingApplication_Group10/groupchatwindow.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic ../MessagingApplication_Group10/groupchatwindow.ui -o ui_groupchatwindow.h
 
 ui_loginwindow.h: ../MessagingApplication_Group10/loginwindow.ui \
 		/usr/lib/qt5/bin/uic
@@ -477,6 +518,10 @@ ui_loginwindow.h: ../MessagingApplication_Group10/loginwindow.ui \
 ui_menuwindow.h: ../MessagingApplication_Group10/menuwindow.ui \
 		/usr/lib/qt5/bin/uic
 	/usr/lib/qt5/bin/uic ../MessagingApplication_Group10/menuwindow.ui -o ui_menuwindow.h
+
+ui_newmessagewindow.h: ../MessagingApplication_Group10/newmessagewindow.ui \
+		/usr/lib/qt5/bin/uic
+	/usr/lib/qt5/bin/uic ../MessagingApplication_Group10/newmessagewindow.ui -o ui_newmessagewindow.h
 
 ui_registerwindow.h: ../MessagingApplication_Group10/registerwindow.ui \
 		/usr/lib/qt5/bin/uic
@@ -496,9 +541,17 @@ compiler_clean: compiler_moc_predefs_clean compiler_moc_header_clean compiler_ui
 
 ####### Compile
 
+contactswindow.o: ../MessagingApplication_Group10/contactswindow.cpp ../MessagingApplication_Group10/contactswindow.h \
+		ui_contactswindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o contactswindow.o ../MessagingApplication_Group10/contactswindow.cpp
+
 groupchatmenu.o: ../MessagingApplication_Group10/groupchatmenu.cpp ../MessagingApplication_Group10/groupchatmenu.h \
 		ui_groupchatmenu.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o groupchatmenu.o ../MessagingApplication_Group10/groupchatmenu.cpp
+
+groupchatwindow.o: ../MessagingApplication_Group10/groupchatwindow.cpp ../MessagingApplication_Group10/groupchatwindow.h \
+		ui_groupchatwindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o groupchatwindow.o ../MessagingApplication_Group10/groupchatwindow.cpp
 
 main.o: ../MessagingApplication_Group10/main.cpp ../MessagingApplication_Group10/loginwindow.h \
 		../MessagingApplication_Group10/menuwindow.h \
@@ -515,6 +568,10 @@ menuwindow.o: ../MessagingApplication_Group10/menuwindow.cpp ../MessagingApplica
 		ui_menuwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o menuwindow.o ../MessagingApplication_Group10/menuwindow.cpp
 
+newmessagewindow.o: ../MessagingApplication_Group10/newmessagewindow.cpp ../MessagingApplication_Group10/newmessagewindow.h \
+		ui_newmessagewindow.h
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o newmessagewindow.o ../MessagingApplication_Group10/newmessagewindow.cpp
+
 registerwindow.o: ../MessagingApplication_Group10/registerwindow.cpp ../MessagingApplication_Group10/registerwindow.h \
 		ui_registerwindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o registerwindow.o ../MessagingApplication_Group10/registerwindow.cpp
@@ -523,14 +580,23 @@ viewprofilewindow.o: ../MessagingApplication_Group10/viewprofilewindow.cpp ../Me
 		ui_viewprofilewindow.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o viewprofilewindow.o ../MessagingApplication_Group10/viewprofilewindow.cpp
 
+moc_contactswindow.o: moc_contactswindow.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_contactswindow.o moc_contactswindow.cpp
+
 moc_groupchatmenu.o: moc_groupchatmenu.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_groupchatmenu.o moc_groupchatmenu.cpp
+
+moc_groupchatwindow.o: moc_groupchatwindow.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_groupchatwindow.o moc_groupchatwindow.cpp
 
 moc_loginwindow.o: moc_loginwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_loginwindow.o moc_loginwindow.cpp
 
 moc_menuwindow.o: moc_menuwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_menuwindow.o moc_menuwindow.cpp
+
+moc_newmessagewindow.o: moc_newmessagewindow.cpp 
+	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_newmessagewindow.o moc_newmessagewindow.cpp
 
 moc_registerwindow.o: moc_registerwindow.cpp 
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o moc_registerwindow.o moc_registerwindow.cpp
