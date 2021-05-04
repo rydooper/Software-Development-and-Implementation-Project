@@ -1,0 +1,55 @@
+{
+    "ABC": {
+        "email": "123@B.co.uk",
+        "forename": "Test",
+        "lastLogin": "Sun Apr 18 15:38:49 2021",
+        "loggedIn": "0",
+        "password": "70617373776f7264",
+        "profilePicture": "blueSquare.png",
+        "surname": "Account"
+    },
+    "DEF": {
+        "email": "Delete.com",
+        "forename": "Delete",
+        "loggedIn": "0",
+        "password": "70617373776f7264",
+        "profilePicture": "redSquare.png",
+        "surname": "Account"
+    },
+    "LAldred20": {
+        "email": "DEF@B.co.uk",
+        "forename": "Luke",
+        "lastLogin": "Sat Apr 17 11:31:10 2021",
+        "loggedIn": "0",
+        "password": "70617373776f7264",
+        "profilePicture": "blueSquare.png",
+        "surname": "Aldred"
+    },
+    "NSiv": {
+        "email": "ABC@A.com",
+        "forename": "Niveetha",
+        "lastLogin": "Sun Apr 18 14:34:48 2021",
+        "loggedIn": "0",
+        "password": "70617373776f7264",
+        "profilePicture": "redSquare.png",
+        "surname": "Sivaruben"
+    },
+    "TestAccount": {
+        "email": "Test@Test.co.uk",
+        "forename": "Register",
+        "lastLogin": "Thu Apr 15 10:39:05 2021",
+        "loggedIn": "0",
+        "password": "70617373776f7264",
+        "profilePicture": "redSquare.png",
+        "surname": "Test"
+    },
+    "User1": {
+        "email": "123@B.co.uk",
+        "forename": "User",
+        "lastLogin": "Sun Apr 18 15:38:16 2021",
+        "loggedIn": "0",
+        "password": "70617373776f7264",
+        "profilePicture": "blueSquare.png",
+        "surname": "One"
+    }
+}

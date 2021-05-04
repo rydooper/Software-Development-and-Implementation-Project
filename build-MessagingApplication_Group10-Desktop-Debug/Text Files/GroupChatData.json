@@ -1,0 +1,23 @@
+{
+    "Test": {
+        "admin": "ABC",
+        "groupChatUsers": "ABC,NSiv,User1,LAldred20",
+        "host": "127.0.0.1",
+        "moderators": "ABC,NSiv",
+        "portNum": "1883"
+    },
+    "Test2": {
+        "admin": "NSiv",
+        "groupChatUsers": "NSiv,LAldred20",
+        "host": "127.0.0.1",
+        "moderators": "User1",
+        "portNum": "1883"
+    },
+    "Topic1": {
+        "admin": "ABC",
+        "groupChatUsers": "User1,NSiv",
+        "host": "127.0.0.1",
+        "moderators": "ABC",
+        "portNum": "1883"
+    }
+}
